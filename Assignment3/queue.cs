@@ -44,16 +44,7 @@ namespace Assignment3
                     }
                     else
                     {
-                        isFound = FindStation(thisPassenger, Globals.economyClassTicketCounters);
-                        if (isFound)
-                        {
-                            passengers.RemoveAt(0);
-                            return isFound;
-                        }
-                        else
-                        {
-                            return isFound;
-                        }
+                        return isFound;
 
                     }
                 }
@@ -67,7 +58,16 @@ namespace Assignment3
                     }
                     else
                     {
-                        return isFound;
+                        isFound = FindStation(thisPassenger, Globals.firstClassTicketCounters);
+                        if (isFound == true)
+                        {
+                            passengers.RemoveAt(0);
+                            return isFound;
+                        }
+                        else
+                        {
+                            return isFound;
+                        }
                     }
 
                 }

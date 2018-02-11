@@ -199,7 +199,6 @@ namespace Assignment3
                 {
                     if (counter.passenger[0] != null)
                     {
-                        counter.AdvanceUptime();
                         counter.passenger[0].AdvanceTimer();
                     }
 
@@ -209,13 +208,12 @@ namespace Assignment3
                 {
                     if (counter.passenger[0] != null)
                     {
-                        counter.AdvanceUptime();
                         counter.passenger[0].AdvanceTimer();
                     }
                 }
 
                 //advance clock
-                Console.Out.WriteLine("Clock: " + clock.Time);
+                //Console.Out.WriteLine("Clock: " + clock.Time);
                 clock.Advance();
             }
 
@@ -283,7 +281,7 @@ namespace Assignment3
                     sumWaitTimeEconomyClass += waitTime;
                     if (waitTime > maximumWaitTimeEconomyClass)
                     {
-                        maximumWaitTimeFirstClass = waitTime;
+                        maximumWaitTimeEconomyClass = waitTime;
                     }
                 }
 
